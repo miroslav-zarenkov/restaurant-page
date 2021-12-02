@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderHome\": () => (/* binding */ renderHome)\n/* harmony export */ });\nconst renderHome = () => {\n\n    const dd = document.createElement(\"div\");\n    dd.textContent = \"Info about our amazing restaurant\";\n    document.querySelector(\"main\").appendChild(dd);\n\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nconsole.log(\"Hello message\");\nconst content = document.createElement(\"div\");\ncontent.classList.add(\"content\");\ncontent.textContent = \"Test Text\";\ndocument.body.appendChild(content);\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\nconst content = document.createElement(\"div\");\ncontent.classList.add(\"content\");\n\nconst header = document.createElement(\"header\");\n\nconst main = document.createElement(\"main\");\n\nconst footer = document.createElement(\"footer\");\nfooter.textContent = \"Developed by miroslav-zarenkov github\";\n\nconst nav = document.createElement(\"nav\");\n\nconst navBtn1 = document.createElement(\"button\");\nnavBtn1.textContent = \"Home\";\n\nconst navBtn2 = document.createElement(\"button\");\nnavBtn2.textContent = \"Menu\";\n\nconst navBtn3 = document.createElement(\"button\");\nnavBtn3.textContent = \"Contact\";\n\n\nconst renderMainPage = (() => {\n    document.body.appendChild(content);\n    content.appendChild(header);\n    header.appendChild(nav);\n    nav.appendChild(navBtn1);\n    nav.appendChild(navBtn2);\n    nav.appendChild(navBtn3);\n    content.appendChild(main);\n    content.appendChild(footer);\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.renderHome)();\n})();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 
