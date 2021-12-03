@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderContact\": () => (/* binding */ renderContact)\n/* harmony export */ });\n/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ \"./src/index.js\");\n\n\n\nconst renderContact = () => {\n    ;(0,_index_js__WEBPACK_IMPORTED_MODULE_0__.clearMain)();\n    const contactDiv = document.createElement(\"div\");\n    contactDiv.textContent = \"contact 123-4456\";\n    document.querySelector(\"main\").appendChild(contactDiv);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderHome\": () => (/* binding */ renderHome)\n/* harmony export */ });\nconst renderHome = () => {\n\n    const dd = document.createElement(\"div\");\n    dd.textContent = \"Info about our amazing restaurant\";\n    document.querySelector(\"main\").appendChild(dd);\n\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderHome\": () => (/* binding */ renderHome)\n/* harmony export */ });\n/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ \"./src/index.js\");\n\n\n\nconst renderHome = () => {\n    ;(0,_index_js__WEBPACK_IMPORTED_MODULE_0__.clearMain)();\n    const homeDiv = document.createElement(\"div\");\n    homeDiv.textContent = \"Info about our amazing restaurant\";\n    document.querySelector(\"main\").appendChild(homeDiv);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -126,7 +136,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\nconst content = document.createElement(\"div\");\ncontent.classList.add(\"content\");\n\nconst header = document.createElement(\"header\");\n\nconst main = document.createElement(\"main\");\n\nconst footer = document.createElement(\"footer\");\nfooter.textContent = \"Developed by miroslav-zarenkov github\";\n\nconst nav = document.createElement(\"nav\");\n\nconst navBtn1 = document.createElement(\"button\");\nnavBtn1.textContent = \"Home\";\n\nconst navBtn2 = document.createElement(\"button\");\nnavBtn2.textContent = \"Menu\";\n\nconst navBtn3 = document.createElement(\"button\");\nnavBtn3.textContent = \"Contact\";\n\n\nconst renderMainPage = (() => {\n    document.body.appendChild(content);\n    content.appendChild(header);\n    header.appendChild(nav);\n    nav.appendChild(navBtn1);\n    nav.appendChild(navBtn2);\n    nav.appendChild(navBtn3);\n    content.appendChild(main);\n    content.appendChild(footer);\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.renderHome)();\n})();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clearMain\": () => (/* binding */ clearMain)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n\n\nconst content = document.createElement(\"div\");\ncontent.classList.add(\"content\");\n\nconst header = document.createElement(\"header\");\n\nconst main = document.createElement(\"main\");\n\nconst footer = document.createElement(\"footer\");\n\nconst footerDiv = document.createElement(\"div\");\nfooterDiv.textContent = \"Developed by miroslav-zarenkov github\";\nfooter.appendChild(footerDiv);\n\nconst nav = document.createElement(\"nav\");\n\nconst navBtn1 = document.createElement(\"button\");\nnavBtn1.classList.add(\"home-button\");\nnavBtn1.textContent = \"Home\";\n\nconst navBtn2 = document.createElement(\"button\");\nnavBtn2.classList.add(\"menu-button\");\nnavBtn2.textContent = \"Menu\";\n\nconst navBtn3 = document.createElement(\"button\");\nnavBtn3.classList.add(\"contact-button\");\nnavBtn3.textContent = \"Contact\";\n\nconst clearMain = () => {\n    let myNode = document.querySelector(\"main\");\n    while (myNode.firstChild) {\n        myNode.removeChild(myNode.lastChild);\n    }\n}\n\nconst renderMainPage = (() => {\n    document.body.appendChild(content);\n    content.appendChild(header);\n    header.appendChild(nav);\n    nav.appendChild(navBtn1);\n    nav.appendChild(navBtn2);\n    nav.appendChild(navBtn3);\n    content.appendChild(main);\n    content.appendChild(footer);\n    (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.renderHome)();\n})();\n\nnavBtn1.addEventListener('click', _home_js__WEBPACK_IMPORTED_MODULE_1__.renderHome);\nnavBtn2.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_2__.renderMenu);\nnavBtn3.addEventListener('click', _contact_js__WEBPACK_IMPORTED_MODULE_3__.renderContact);\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderMenu\": () => (/* binding */ renderMenu)\n/* harmony export */ });\n/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ \"./src/index.js\");\n\n\n\nconst renderMenu = () => {\n    ;(0,_index_js__WEBPACK_IMPORTED_MODULE_0__.clearMain)();\n    const menuDiv = document.createElement(\"div\");\n    menuDiv.textContent = \"Menu\";\n    document.querySelector(\"main\").appendChild(menuDiv);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ })
 
@@ -201,7 +221,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
