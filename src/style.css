@@ -15,6 +15,8 @@ html {
 
 body {
     background: url(./background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
@@ -29,8 +31,6 @@ header {
     width: 100%;
     background-color: var(--dark-background-color);
 }
-
-
 
 main {
     font-size: 4rem;
@@ -49,6 +49,7 @@ footer {
     width: 100%;
     background-color: var(--dark-background-color);
     border-top: 1px solid black;
+    margin-top: auto;
 }
 
 .content {
