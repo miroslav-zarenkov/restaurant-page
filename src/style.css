@@ -1,7 +1,11 @@
+:root {
+    --font-color: rgb(240, 240, 240);
+    --dark-background-color: rgba(0, 0, 0, 0.7);
+}
+
 * {
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
 }
 
 html {
@@ -9,10 +13,24 @@ html {
     height: 100vh;
 }
 
+body {
+    background: url(./background.jpg);
+}
+
 header {
     font-size: 2rem;
     flex-shrink: 0;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark-background-color);
 }
+
+
 
 main {
     font-size: 4rem;
@@ -21,8 +39,16 @@ main {
 
 footer {
     font-size: 2rem;
-    margin-bottom: 0;
     flex-shrink: 0;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark-background-color);
+    border-top: 1px solid black;
 }
 
 .content {
@@ -30,6 +56,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffe4c4;
     min-height: 100vh;
+    color: var(--font-color);
+}
+
+img {
+    width: 32px;
+    height: auto;
+    display: block;
 }
