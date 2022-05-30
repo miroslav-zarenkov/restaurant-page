@@ -26,6 +26,16 @@ body {
 
 }
 
+h1 {
+    font-size: 6rem;
+    font-family: "Great Vibes";
+}
+
+h2 {
+    font-size: 3.3rem;
+    padding: 10px;
+}
+
 header {
     font-size: 2rem;
     flex-shrink: 0;
@@ -48,6 +58,9 @@ main {
 main>div {
     margin: 2rem;
     background-color: var(--dark-background-color);
+    text-align: center;
+    width: 75%;
+    padding: 20px;
 }
 
 footer {
@@ -81,10 +94,6 @@ img {
     display: block;
 }
 
-h1 {
-    font-size: 6rem;
-    font-family: "Great Vibes";
-}
 
 
 button {
@@ -98,4 +107,5 @@ button {
 
 .active-button {
     border-bottom: 3px var(--font-color) solid;
+    transform: scale(1.2);
 }
