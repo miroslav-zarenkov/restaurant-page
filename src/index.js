@@ -12,6 +12,11 @@ const clearMain = () => {
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
     }
+
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(button =>{
+        button.classList.remove("active-button");
+    })
 }
 
 const renderMainPage = (() => {
@@ -19,6 +24,20 @@ const renderMainPage = (() => {
     content.classList.add("content");
 
     const header = document.createElement("header");
+
+    const name = document.createElement('h1');
+    name.textContent ="Freddy’s Stove";
+
+    const nav = document.createElement("nav");
+    const navBtn1 = document.createElement("button");
+    navBtn1.classList.add("home-button");
+    navBtn1.textContent = "Home";
+    const navBtn2 = document.createElement("button");
+    navBtn2.classList.add("menu-button");
+    navBtn2.textContent = "Menu";
+    const navBtn3 = document.createElement("button");
+    navBtn3.classList.add("contact-button");
+    navBtn3.textContent = "Contact";
 
     const main = document.createElement("main");
 
@@ -35,19 +54,11 @@ const renderMainPage = (() => {
     footer.appendChild(footerLink);
     footerLink.appendChild(footerLinkImg);
 
-    const nav = document.createElement("nav");
-    const navBtn1 = document.createElement("button");
-    navBtn1.classList.add("home-button");
-    navBtn1.textContent = "Home";
-    const navBtn2 = document.createElement("button");
-    navBtn2.classList.add("menu-button");
-    navBtn2.textContent = "Menu";
-    const navBtn3 = document.createElement("button");
-    navBtn3.classList.add("contact-button");
-    navBtn3.textContent = "Contact";
+    
 
     document.body.appendChild(content);
     content.appendChild(header);
+    header.appendChild(name)
     header.appendChild(nav);
     nav.appendChild(navBtn1);
     nav.appendChild(navBtn2);

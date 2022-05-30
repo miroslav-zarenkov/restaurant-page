@@ -3,6 +3,12 @@
     --dark-background-color: rgba(0, 0, 0, 0.7);
 }
 
+@font-face {
+    font-family: "Great Vibes";
+    src: url('./greatvibes-regular-webfont.woff2') format('woff2'),
+        url('./greatvibes-regular-webfont.woff') format('woff');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,13 +23,14 @@ body {
     background: url(./background.jpg);
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 header {
     font-size: 2rem;
     flex-shrink: 0;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -31,21 +38,32 @@ header {
 }
 
 main {
-    font-size: 4rem;
+    font-size: 2rem;
     flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>div {
+    margin: 2rem;
+    background-color: var(--dark-background-color);
 }
 
 footer {
     font-size: 2rem;
+    line-height: 2rem;
     flex-shrink: 0;
     display: flex;
-    gap: 1rem;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: var(--dark-background-color);
     border-top: 1px solid black;
-    margin-top: auto;
+}
+
+footer * {
+    padding: 0.5rem;
 }
 
 .content {
@@ -58,7 +76,26 @@ footer {
 }
 
 img {
-    width: 32px;
+    width: 28px;
     height: auto;
     display: block;
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: "Great Vibes";
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+    color: var(--font-color)
+}
+
+.active-button {
+    border-bottom: 3px var(--font-color) solid;
 }
