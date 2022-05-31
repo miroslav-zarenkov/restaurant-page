@@ -1,6 +1,7 @@
 :root {
     --font-color: rgb(240, 240, 240);
     --dark-background-color: rgba(0, 0, 0, 0.7);
+    --gray-color: #484646;
 }
 
 @font-face {
@@ -33,7 +34,7 @@ h1 {
 
 h2 {
     font-size: 3.3rem;
-    padding: 10px;
+    padding: 1rem;
 }
 
 header {
@@ -50,17 +51,32 @@ header {
 main {
     font-size: 2rem;
     flex: 1 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: minmax(350px, 1000px);
+}
+
+.home-wrapper,
+.contact-wrapper,
+.menu-wrapper {
+    margin: 2rem;
+    background-color: var(--dark-background-color);
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--gray-color);
+    justify-self: center;
+    align-self: center;
+    width: 75%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-main>div {
-    margin: 2rem;
-    background-color: var(--dark-background-color);
-    text-align: center;
-    width: 75%;
-    padding: 20px;
+main>div>p {
+    padding: 0.75rem;
 }
 
 footer {
@@ -108,4 +124,9 @@ button {
 .active-button {
     border-bottom: 3px var(--font-color) solid;
     transform: scale(1.2);
+}
+
+.map-img {
+    width: 90%;
+    height: auto;
 }

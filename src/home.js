@@ -5,7 +5,8 @@ const renderHome = () => {
     clearMain();
    
     const homeDiv = document.createElement("div");
-    const homeDivHead =document.createElement("h2");
+    homeDiv.classList.add("home-wrapper");
+    const homeDivHead = document.createElement("h2");
     homeDivHead.textContent = "Visit the best restaurant in Ohio!";
     homeDiv.appendChild(homeDivHead);
     const homeDivFirstP = document.createElement("p");
