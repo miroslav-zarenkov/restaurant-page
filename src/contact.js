@@ -6,14 +6,20 @@ const renderContact = () => {
     clearMain();
     const contactDiv = document.createElement("div");
     contactDiv.classList.add("contact-wrapper");
-    document.querySelector("main").appendChild(contactDiv); 
+    document.querySelector("main").appendChild(contactDiv);
+    const contactDivAdressH = document.createElement("h2");
+    contactDivAdressH.textContent = "Find Us"
     const contactDivAdressP = document.createElement("p");
     contactDivAdressP.classList.add("contact-menu-adress");
-    contactDivAdressP.textContent = "Find us at 100 South Fountain Avenue, Springfield, OH, USA"
+    contactDivAdressP.textContent = "100 South Fountain Avenue, Springfield, OH, USA"
+    contactDiv.appendChild(contactDivAdressH);
     contactDiv.appendChild(contactDivAdressP);
+    const contactDivCallH = document.createElement("h2");
+    contactDivCallH.textContent = "Call Us"
     const contactDivCallP = document.createElement("p");
     contactDivCallP.classList.add("contact-menu-call");
-    contactDivCallP.textContent = "Call us 555-2368"
+    contactDivCallP.textContent = "555-2368"
+    contactDiv.appendChild(contactDivCallH);
     contactDiv.appendChild(contactDivCallP);
     const contactDivMap = document.createElement("img");
     contactDivMap.setAttribute("src", Map);

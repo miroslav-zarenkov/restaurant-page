@@ -1,6 +1,7 @@
 :root {
     --font-color: rgb(240, 240, 240);
     --dark-background-color: rgba(0, 0, 0, 0.7);
+    --lighter-background-color: rgba(0, 0, 0, 0.5);
     --gray-color: #484646;
 }
 
@@ -8,6 +9,18 @@
     font-family: "Great Vibes";
     src: url('./greatvibes-regular-webfont.woff2') format('woff2'),
         url('./greatvibes-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Courgette";
+    src: url('./courgette-regular-webfont.woff2') format('woff2'),
+        url('./courgette-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url('./ebgaramond-variablefont_wght-webfont.woff2') format('woff2'),
+        url('./ebgaramond-variablefont_wght-webfont.woff') format('woff');
 }
 
 * {
@@ -29,12 +42,21 @@ body {
 
 h1 {
     font-size: 6rem;
-    font-family: "Great Vibes";
+    font-family: "Great Vibes", sans-serif;
 }
 
 h2 {
     font-size: 3.3rem;
-    padding: 1rem;
+    font-family: "Courgette", sans-serif;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-family: "Courgette", sans-serif;
+}
+
+p {
+    font-family: "Garamond", sans-serif;
 }
 
 header {
@@ -51,9 +73,6 @@ header {
 main {
     font-size: 2rem;
     flex: 1 0 auto;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     display: grid;
     grid-template-columns: minmax(350px, 1000px);
 }
@@ -129,4 +148,22 @@ button {
 .map-img {
     width: 90%;
     height: auto;
+}
+
+.menu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+}
+
+.menu-wrapper div {
+    padding: 0.5rem;
+    background-color: var(--lighter-background-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+}
+
+.menu-wrapper div>p {
+    padding: 0.75rem;
 }
